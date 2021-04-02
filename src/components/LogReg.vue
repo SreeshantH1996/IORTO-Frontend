@@ -3,17 +3,10 @@
     <div class="cont" id="main_cont">
       <!-- SIGN IN START -->
       <div class="form sign-in">
-        <form id="user_registrationfrom">
+        <form id="signupform">
           <h2 style="margin-left: 4%; margin-bottom: 2%">
             Welcome Back, <b style="color: green">Login</b> to Continue
           </h2>
-          <div>
-            <b-button v-b-modal.modal-1>Launch demo modal</b-button>
-
-            <b-modal id="modal-1" title="BootstrapVue">
-              <p class="my-4">Hello from modal!</p>
-            </b-modal>
-          </div>
           <div class="signup_form">
             <div class="form-group">
               <label>Username</label>
@@ -109,6 +102,7 @@
               name="name"
               type="text"
               class="form-control"
+              v-model="userRegNam"
               placeholder="Enter you name"
               required
             />
@@ -118,6 +112,7 @@
             <input
               name="address"
               type="text"
+              v-model="userRegAdd"
               class="form-control"
               placeholder="Enter you address"
               required
@@ -128,6 +123,7 @@
             <input
               name="age"
               type="number"
+              v-model="userRegAge"
               class="form-control"
               placeholder="Enter you age"
               required
@@ -140,6 +136,7 @@
             <select
               name="district"
               class="form-control"
+              v-model="userRegDis"
               id="exampleFormControlSelect1"
               required
             >
@@ -165,6 +162,7 @@
             <input
               name="username"
               type="text"
+              v-model="userRegUna"
               class="form-control"
               placeholder="Enter a valid username"
               required
@@ -174,16 +172,17 @@
             <label>Password<span style="color: red">*</span></label>
             <input
               name="password"
+              v-model="userRegpas"
               type="password"
               class="form-control"
               placeholder="***********"
               required
             />
           </div>
-          <!-- <div class="form-group">
+          <div class="form-group">
               <label>Enter the password<span style="color:red">*</span></label>
-              <input name="re-password" type="password" class="form-control"  placeholder="***********" required>
-            </div> -->
+              <input v-model="userRegrep" type="password" class="form-control"  placeholder="***********" required>
+            </div>
           <!-- <div class="form-group" style="margin-left: 12%;display: None;" id="error_message">
               <b>All fields marked as <span style="color:red">*</span> are required</b>
             </div> -->
