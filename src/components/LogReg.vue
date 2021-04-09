@@ -57,11 +57,11 @@
       <div class="sub-cont">
         <div class="img">
           <div class="img__text m--up">
-            <h1 style="font-family: fantasy">IORTO</h1>
+            <h1 style="font-family: fantasy">RTO-OLVS</h1>
             <p>Sign up and discover great amount of new opportunities!</p>
           </div>
           <div class="img__text m--in">
-            <h1 style="font-family: fantasy">IORTO</h1>
+            <h1 style="font-family: fantasy">RTO-OLVS</h1>
             <p>
               If you already has an account, just sign in. We've missed you!
             </p>

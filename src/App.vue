@@ -7,6 +7,10 @@
 </template>
 
 <style>
+body{
+  overflow: hidden !important;
+  background-color: #d0d0d0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

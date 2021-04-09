@@ -1,0 +1,35 @@
+#main_cont{
+    margin: 7%;
+    border: 1px solid grey;
+}
+
+#rowinside{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+}
+
+.btn{
+    width: 100%;
+}
+
+.rowforeach{
+    padding: 20%;
+}
+.cont {
+    overflow: hidden;
+    position: relative;
+    width: 900px;
+    height: 494px;
+    margin: 0 auto 100px;
+    background: #fff;
+    margin-top: 4%;
+    border: 1px solid grey;
+  }
+
+#header{
+    padding: 1%;
+    background-color: #545454;
+}  
