@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.21.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
+    "razorpay": "^2.0.6",
     "vue": "^2.6.12",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.2.0",

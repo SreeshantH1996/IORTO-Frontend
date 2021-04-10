@@ -28,6 +28,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "userhome" */ '../views/CreateLicence.vue')
   },
   {
+    path: '/uploaddocuments',
+    name: 'UploadDocuments',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/UploadDocuments.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

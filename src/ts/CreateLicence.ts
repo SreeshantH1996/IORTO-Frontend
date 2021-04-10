@@ -29,4 +29,11 @@ export default class CreateLicence extends Vue {
             $("#temporaryadd").show();
         }
     }
+
+    public CreateLicence(){
+        console.log("test")
+        const form: any = document.getElementById('createlicence');
+        console.log(form)
+        const formData = new FormData(form);
+    }
 }

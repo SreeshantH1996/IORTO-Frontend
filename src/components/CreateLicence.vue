@@ -30,7 +30,7 @@
       <div style="text-align: left; margin: 4%">
         <h3>Fill the form with valid data</h3>
         <br />
-        <form action="">
+        <form v-on:submit.prevent="CreateLicence()" id="createlicence">
           <div class="row">
             <div class="col-6">
               <div class="form-group">
@@ -347,10 +347,9 @@
                     >House Name / Number<span style="color: red">*</span></label
                   >
                   <input
-                    name="housename"
+                    name="tmhousename"
                     type="text"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -362,10 +361,9 @@
                     ></label
                   >
                   <input
-                    name="street"
+                    name="tmstreet"
                     type="text"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -377,10 +375,9 @@
                     >Location / Landmark<span style="color: red">*</span></label
                   >
                   <input
-                    name="landmark"
+                    name="tmlandmark"
                     type="text"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -388,10 +385,9 @@
                 <div class="form-group">
                   <label>Pincode<span style="color: red">*</span></label>
                   <input
-                    name="pincode"
+                    name="tmpincode"
                     type="number"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -401,10 +397,9 @@
                 <div class="form-group">
                   <label>Village / Town<span style="color: red">*</span></label>
                   <input
-                    name="village"
+                    name="tmvillage"
                     type="text"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -412,10 +407,9 @@
                 <div class="form-group">
                   <label>Taluk<span style="color: red">*</span></label>
                   <input
-                    name="taluk"
+                    name="tmtaluk"
                     type="text"
                     class="form-control"
-                    required
                   />
                 </div>
               </div>
@@ -462,7 +456,7 @@
           <span style="color: red">All fields with * mark is mandatory</span>
           <div class="row" style="margin-top: 2%; margin-bottom: 2%">
             <div class="col-6">
-              <button class="btn btn-lg btn-primary">Submit</button>
+              <button type="submit" class="btn btn-lg btn-primary">Submit</button>
             </div>
             <div class="col-6" style="text-align: right">
                 <a href="/#/userhome">
