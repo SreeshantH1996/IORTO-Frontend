@@ -7,6 +7,10 @@
 </template>
 
 <style>
+#header{
+    padding: 1%;
+    background-color: #545454;
+}  
 body{
   overflow: hidden !important;
   background-color: #d0d0d0;

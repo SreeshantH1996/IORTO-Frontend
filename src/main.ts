@@ -9,7 +9,7 @@ import 'vue-toast-notification/dist/theme-default.css';
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
 
-Axios.defaults.baseURL = 'http://localhost:800';
+Axios.defaults.baseURL = 'http://localhost:8000';
 
 new Vue({
   router,
