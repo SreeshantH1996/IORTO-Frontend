@@ -50,10 +50,14 @@
         <div>
             <div class="row" style="margin:5%;">
                 <div class="col-6" style="text-align:left;">
+                  <a href="/#/userhome">
                     <button class="btn btn-primary">Back</button>
+                  </a>
                 </div>
                 <div class="col-6" style="text-align:right;">
+                  <a href="/#/createlicence">
                     <button class="btn btn-primary">Next</button>
+                  </a>
                 </div>
             </div>
         </div>

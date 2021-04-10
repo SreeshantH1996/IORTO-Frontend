@@ -21,6 +21,12 @@ const routes: Array<RouteConfig> = [
     name: 'NewLicence',
     component: () => import(/* webpackChunkName: "userhome" */ '../views/NewLicence.vue')
   },
+  // CreateLicence
+  {
+    path: '/createlicence',
+    name: 'CreateLicence',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/CreateLicence.vue')
+  },
   {
     path: '/about',
     name: 'About',

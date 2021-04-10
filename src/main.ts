@@ -5,6 +5,7 @@ import BootstrapVue from 'bootstrap-vue';
 import Axios from 'axios';
 import store from './store';
 import 'vue-toast-notification/dist/theme-default.css';
+import $ from 'jquery'
 
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false
