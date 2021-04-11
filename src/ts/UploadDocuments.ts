@@ -52,4 +52,8 @@ export default class UploadDocuments extends Vue {
             loader.hide()
         });
     }
+
+    public CreateLicence(){
+        console.log("test")
+    }
 }

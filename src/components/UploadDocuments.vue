@@ -129,7 +129,7 @@
         <hr />
         <div style="margin-top: 2%">
           <h4>Upload Documnets</h4>
-          <form action="">
+          <form v-on:submit.prevent="CreateLicence()" id="uploaddocuments">
             <div class="row" style="margin-top: 3%">
               <div class="col-6">
                 <div class="form-group">
@@ -150,6 +150,7 @@
                     class="form-control-file"
                     accept="application/pdf"
                     name="identityproof"
+                    required
                   />
                 </div>
               </div>
@@ -170,6 +171,7 @@
                     class="form-control-file"
                     accept="application/pdf"
                     name="eyecertificate"
+                    required
                   />
                 </div>
               </div>
@@ -191,6 +193,7 @@
                     class="form-control-file"
                     accept="application/pdf"
                     name="selfdeclarationfrom"
+                    required
                   />
                 </div>
               </div>
@@ -211,6 +214,7 @@
                     class="form-control-file"
                     accept=".jpg,.gif,.png"
                     name="photo"
+                    required
                   />
                 </div>
               </div>
@@ -229,6 +233,7 @@
                     class="form-control-file"
                     accept=".jpg,.gif,.png"
                     name="signature"
+                    required
                   />
                 </div>
               </div>
