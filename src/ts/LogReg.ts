@@ -24,23 +24,14 @@ export default class LogReg extends Vue {
         console.log("Toggle function called");
         document.getElementById('main_cont').classList.toggle('s--signup');
     }
-    private UserRegsitrationSubmit() {
-        if (!this.userRegNam || !this.userRegAdd || !this.userRegDis || !this.userRegUna || !this.userRegpas || !this.userRegAge || !this.userRegrep){
-            this.$store.dispatch('showErrorMsg', "Fields marked as '*' are required");
-            return false;
-        }
-        if(this.userRegpas.length < 8){
-            this.$store.dispatch('showErrorMsg', "Password should have a length of 8 charachters");
-            return false; 
-        }
-        if (this.userRegpas != this.userRegrep){
-            this.$store.dispatch('showErrorMsg', "Please enter the same password");
-            return false;
-        }
-        const form: any = document.getElementById('user_registrationfrom');
+    
+    public LoginUser(){
+        console.log("test")
+        const form: any = document.getElementById('signupform');
+        console.log(form)
         const formData = new FormData(form);
-        logregserve.postUserRegistrationApi(formData).then((response: any) => {
-            console.log("Success");
+        logregserve.UserLoginApi(formData).then((response: any) => {
+            console.log(response);
         }, (err: any) => {
             console.log("error");
         });

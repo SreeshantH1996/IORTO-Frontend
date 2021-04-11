@@ -269,11 +269,15 @@ input {
 .form-control{
   /* border: None !important; */
   text-align: left;
-  border-bottom: 1px sold black;
+  /* border-bottom: 1px sold black; */
   box-shadow: 0 0px 0px 0 rgb(0 0 0 / 1%), 0 6px 7px 0 rgb(0 0 0 / 5%);
 }
 
 .modal-backdrop{
     display: none;
     opacity: 0.5 !important;
+}
+
+#UserRegistartionModal___BV_modal_backdrop_{
+  opacity: 0.5 !important;
 }

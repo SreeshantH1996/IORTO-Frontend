@@ -8,6 +8,10 @@ export default class LogRestService {
   }
 
   public postUserRegistrationApi(data: any) {
-    return this.apiService.post('advertising-api/', data);
+    return this.apiService.post('user_registration/', data);
+  }
+
+  public UserLoginApi(data: any) {
+    return this.apiService.post('login/', data);
   }
 }  
