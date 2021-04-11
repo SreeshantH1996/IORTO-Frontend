@@ -6,46 +6,46 @@
         <div style="margin-top: 2%">
           <div class="row">
             <div class="col-6">
-              <b>District : Test</b>
+              <b>District : {{UserDetials.district}}</b>
             </div>
             <div class="col-6">
-              <b>Phone Number : 123456789</b>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <b>Name of Applicant : Test Name</b>
-            </div>
-            <div class="col-6">
-              <b>Realtion : Father , Name : Test Name</b>
+              <b>Phone Number : {{UserDetials.phnumber}}</b>
             </div>
           </div>
 
           <div class="row">
             <div class="col-6">
-              <b>Gender : Male</b>
+              <b>Name of Applicant : {{UserDetials.name}}</b>
             </div>
             <div class="col-6">
-              <b>Qualification : test</b>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <b>Emergency Phone Number : 1234567</b>
-            </div>
-            <div class="col-6">
-              <b>Date Of birth : 11/22/2020</b>
+              <b>Realtion : {{UserDetials.relation_with}} , Name : {{UserDetials.relation_name}}</b>
             </div>
           </div>
 
           <div class="row">
             <div class="col-6">
-              <b>Country Of Birth : Canada</b>
+              <b>Gender : {{UserDetials.gender}}</b>
             </div>
             <div class="col-6">
-              <b>Blood Group : B+</b>
+              <b>Qualification : {{UserDetials.qualification}}</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <b>Emergency Phone Number : {{UserDetials.emphnumber}}</b>
+            </div>
+            <div class="col-6">
+              <b>Date Of birth : {{UserDetials.dob}}</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <b>Country Of Birth : {{UserDetials.country}}</b>
+            </div>
+            <div class="col-6">
+              <b>Blood Group : {{UserDetials.blood}}</b>
             </div>
           </div>
 
@@ -53,11 +53,11 @@
             <div class="col-6">
               <b
                 >Identification Mark 1 :
-                testetsetsetstestetsetstesdfsfsdfsdfsdfsdfsdfs</b
+                {{UserDetials.identificationmark1}}</b
               >
             </div>
             <div class="col-6">
-              <b>Identification Mark 2 : testetsetsetstestetsetstes</b>
+              <b>Identification Mark 2 : {{UserDetials.identificationmark2}}</b>
             </div>
           </div>
 
@@ -65,28 +65,28 @@
           <h4>Permanent Address</h4>
           <div class="row">
             <div class="col-6">
-              <b>House Name / Number : </b>
+              <b>House Name / Number : {{UserDetials.prhousename}}</b>
             </div>
             <div class="col-6">
-              <b>Street : test</b>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <b>Location : Location</b>
-            </div>
-            <div class="col-6">
-              <b>Pincode : 682312</b>
+              <b>Street : {{UserDetials.prstreet}}</b>
             </div>
           </div>
 
           <div class="row">
             <div class="col-6">
-              <b>Village : Village</b>
+              <b>Location : {{UserDetials.prlocation}}</b>
             </div>
             <div class="col-6">
-              <b>Taluk : Taluk</b>
+              <b>Pincode : {{UserDetials.prpincode}}</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <b>Village : {{UserDetials.prvillage}}</b>
+            </div>
+            <div class="col-6">
+              <b>Taluk : {{UserDetials.prtaluk}}</b>
             </div>
           </div>
 
@@ -94,28 +94,28 @@
           <h4>Temperory Address</h4>
           <div class="row">
             <div class="col-6">
-              <b>House Name / Number : </b>
+              <b>House Name / Number : {{UserDetials.trhousename}}</b>
             </div>
             <div class="col-6">
-              <b>Street : test</b>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-6">
-              <b>Location : Location</b>
-            </div>
-            <div class="col-6">
-              <b>Pincode : 682312</b>
+              <b>Street : {{UserDetials.tstreet}}</b>
             </div>
           </div>
 
           <div class="row">
             <div class="col-6">
-              <b>Village : Village</b>
+              <b>Location : {{UserDetials.trlocation}}</b>
             </div>
             <div class="col-6">
-              <b>Taluk : Taluk</b>
+              <b>Pincode : {{UserDetials.trpincode}}</b>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <b>Village : {{UserDetials.trvillage}}</b>
+            </div>
+            <div class="col-6">
+              <b>Taluk : {{UserDetials.trtaluk}}</b>
             </div>
           </div>
         </div>

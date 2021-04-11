@@ -14,4 +14,12 @@ export default class LogRestService {
   public UserLoginApi(data: any) {
     return this.apiService.post('login/', data);
   }
+
+  public CreateNewLicence(data: any) {
+    return this.apiService.post('licence_apply/', data);
+  }
+
+  public getUserDetials(data: any) {
+    return this.apiService.post('get_user/', data);
+  }
 }  

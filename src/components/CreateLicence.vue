@@ -14,7 +14,7 @@
                 <select
                   name="district"
                   class="form-control"
-                  v-model="userRegDis"
+                  v-model="UserDetials.district"
                   id="exampleFormControlSelect1"
                   required
                 >
@@ -42,6 +42,7 @@
                 <input
                   name="phnumber"
                   type="number"
+                  v-model="UserDetials.phnumber"
                   class="form-control"
                   placeholder="Enter a valid phnumber"
                   required
@@ -60,6 +61,7 @@
                 <input
                   name="name"
                   type="text"
+                  v-model="UserDetials.name"
                   class="form-control"
                   placeholder="Enter a valid name"
                   required
@@ -71,7 +73,7 @@
                 <div class="row">
                   <div class="col-4">
                     <label>Relation<span style="color: red">*</span></label>
-                    <select name="relation" class="form-control" required>
+                    <select v-model="UserDetials.relation_with" name="relation" class="form-control" required>
                       <option value="">--</option>
                       <option value="fater">Father</option>
                       <option value="mother">Mother</option>
@@ -82,6 +84,7 @@
                       style="margin-top: 10%"
                       name="relationname"
                       type="text"
+                      v-model="UserDetials.relation_name"
                       class="form-control"
                       placeholder="Enter a valid name"
                       required
@@ -96,7 +99,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Gender<span style="color: red">*</span></label>
-                <select name="dender" class="form-control" required>
+                <select v-model="UserDetials.gender" name="gender" class="form-control" required>
                   <option value="">--</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -107,7 +110,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Qualification<span style="color: red">*</span></label>
-                <select name="dender" class="form-control" required>
+                <select v-model="UserDetials.qualification" name="qualification" class="form-control" required>
                   <option value="">--</option>
                   <option value="No formal education">
                     No formal education
@@ -137,6 +140,7 @@
                 <input
                   name="enumber"
                   type="number"
+                  v-model="UserDetials.emphnumber"
                   class="form-control"
                   placeholder="Enter a valid ph number"
                   required
@@ -150,6 +154,7 @@
                   name="dob"
                   type="date"
                   class="form-control"
+                  v-model="UserDetials.dob"
                   placeholder="Enter a valid date"
                   required
                 />
@@ -164,6 +169,7 @@
                 <input
                   name="country"
                   type="text"
+                  v-model="UserDetials.country"
                   class="form-control"
                   placeholder="Enter a valid name"
                   required
@@ -173,7 +179,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Blood Group<span style="color: red">*</span></label>
-                <select name="bloodgroup" class="form-control" required>
+                <select v-model="UserDetials.blood" name="bloodgroup" class="form-control" required>
                   <option value="">--</option>
                   <option value="A+">A+</option>
                   <option value="A-">A-</option>
@@ -197,6 +203,7 @@
                 <input
                   name="idenmark1"
                   type="text"
+                  v-model="UserDetials.identificationmark1"
                   class="form-control"
                   required
                 />
@@ -210,6 +217,7 @@
                 <input
                   name="idenmark2"
                   type="text"
+                  v-model="UserDetials.identificationmark2"
                   class="form-control"
                   required
                 />
@@ -229,6 +237,7 @@
                 <input
                   name="housename"
                   type="text"
+                  v-model="UserDetials.prhousename"
                   class="form-control"
                   required
                 />
@@ -244,6 +253,7 @@
                 <input
                   name="street"
                   type="text"
+                  v-model="UserDetials.prstreet"
                   class="form-control"
                   required
                 />
@@ -259,6 +269,7 @@
                 <input
                   name="landmark"
                   type="text"
+                  v-model="UserDetials.prlocation"
                   class="form-control"
                   required
                 />
@@ -270,6 +281,7 @@
                 <input
                   name="pincode"
                   type="number"
+                  v-model="UserDetials.prpincode"
                   class="form-control"
                   required
                 />
@@ -283,6 +295,7 @@
                 <input
                   name="village"
                   type="text"
+                  v-model="UserDetials.prvillage"
                   class="form-control"
                   required
                 />
@@ -291,7 +304,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Taluk<span style="color: red">*</span></label>
-                <input name="taluk" type="text" class="form-control" required />
+                <input v-model="UserDetials.prtaluk" name="taluk" type="text" class="form-control" required />
               </div>
             </div>
           </div>
@@ -306,6 +319,7 @@
                 style="margin-left: 1%"
                 class="form-check-input"
                 id="is3dCheckBox"
+                name="sameasabove"
                 v-on:change="SameAsAboveClick()"
                 type="checkbox"
                 checked
@@ -323,6 +337,7 @@
                   <input
                     name="tmhousename"
                     type="text"
+                    v-model="UserDetials.trhousename"
                     class="form-control"
                   />
                 </div>
@@ -337,6 +352,7 @@
                   <input
                     name="tmstreet"
                     type="text"
+                    v-model="UserDetials.tstreet"
                     class="form-control"
                   />
                 </div>
@@ -351,6 +367,7 @@
                   <input
                     name="tmlandmark"
                     type="text"
+                    v-model="UserDetials.trlocation"
                     class="form-control"
                   />
                 </div>
@@ -361,6 +378,7 @@
                   <input
                     name="tmpincode"
                     type="number"
+                    v-model="UserDetials.trpincode"
                     class="form-control"
                   />
                 </div>
@@ -373,6 +391,7 @@
                   <input
                     name="tmvillage"
                     type="text"
+                    v-model="UserDetials.trvillage"
                     class="form-control"
                   />
                 </div>
@@ -383,6 +402,7 @@
                   <input
                     name="tmtaluk"
                     type="text"
+                    v-model="UserDetials.trtaluk"
                     class="form-control"
                   />
                 </div>
@@ -394,7 +414,7 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Class of vehicle<span style="color: red">*</span></label>
-                <select name="bloodgroup" class="form-control" required>
+                <select v-model="UserDetials.classofvehicle" name="classofveh" class="form-control" required>
                   <option value="">--</option>
                   <option value="MC50CC">
                     Motor Cycle less than 50cc (MC50CC)

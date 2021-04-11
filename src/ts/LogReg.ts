@@ -1,6 +1,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { BModal, VBModal } from "bootstrap-vue";
 import LogRestService from '../services/LogReg';
+import router from '@/router';
 
 const logregserve = new LogRestService();
 
@@ -14,6 +15,14 @@ const logregserve = new LogRestService();
 })
 export default class LogReg extends Vue {
     public isLoading = false
+
+    public created(){
+        console.log("test")
+        if(this.$store.state.IsUserLoggedIn){
+            router.push("/userhome")
+        }
+    }
+    
     private ToggleFunction() {
         console.log("Toggle function called");
         document.getElementById('main_cont').classList.toggle('s--signup');
