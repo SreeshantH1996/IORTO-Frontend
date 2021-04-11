@@ -1,17 +1,50 @@
 <template>
   <div id="app">
-
+    <div id="header" v-if="UserLoggedInFlag">
+      <div class="row">
+        <div
+          class="col-6"
+          style="
+            text-align: left;
+            color: white;
+            font-weight: 900;
+            font-size: 27px;
+          "
+        >
+          <span> RTO-OLVS </span>
+        </div>
+        <div class="col-6" style="text-align: right">
+          <button class="btn-lg btn-primary" style="margin-right: 4px">
+            Edit Profile
+          </button>
+          <button v-on:click="LogOut()" class="btn-lg btn-primary">
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6" style="text-align: left">
+          <span style="font-size: 3px; color: black">
+            Associated with RTO, Kerala
+          </span>
+        </div>
+        <div class="col-6" style="text-align: right">
+          <span style="test-align: right; font-size: 3px; color: black"
+            >Welcome, <b>{{UserName}}</b></span
+          >
+        </div>
+      </div>
+    </div>
     <router-view />
   </div>
-  
 </template>
-
+<script lang="ts" src="../src/App.ts"></script>
 <style>
-#header{
-    padding: 1%;
-    background-color: #545454;
-}  
-body{
+#header {
+  padding: 8px;
+  background-color: #b7b6b6;
+}
+body {
   overflow: hidden !important;
   background-color: #d0d0d0;
 }
@@ -35,5 +68,6 @@ body{
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-@import'~bootstrap/dist/css/bootstrap.css'
+@import "~bootstrap/dist/css/bootstrap.css";
 </style>
+

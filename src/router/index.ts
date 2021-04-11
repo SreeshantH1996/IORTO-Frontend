@@ -4,7 +4,7 @@ import LogReg from '../views/LogReg.vue'
 import UserHome from '../views/UserHome.vue'
 
 Vue.use(VueRouter)
-
+const user = localStorage.getItem('user');
 const routes: Array<RouteConfig> = [
   {
     path: '/',

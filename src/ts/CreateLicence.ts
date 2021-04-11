@@ -2,6 +2,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { BModal, VBModal } from "bootstrap-vue";
 import LogRestService from '../services/LogReg';
 import $ from 'jquery'
+import router from '@/router';
 
 const logregserve = new LogRestService();
 
@@ -14,9 +15,11 @@ const logregserve = new LogRestService();
     },
 })
 export default class CreateLicence extends Vue {
-    // public created(){
-    //     alert();
-    // }
+    public created(){
+        if(!this.$store.state.IsUserLoggedIn){
+            router.push("/")
+        }
+    }
 
     public SameAsAboveClick() {
         console.log("Click on button")

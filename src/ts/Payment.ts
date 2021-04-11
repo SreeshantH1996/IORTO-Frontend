@@ -2,6 +2,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 import { BModal, VBModal } from "bootstrap-vue";
 import LogRestService from '../services/LogReg';
 import Razorpay from 'razorpay';
+import router from '@/router';
 
 const logregserve = new LogRestService();
 
@@ -15,7 +16,12 @@ const logregserve = new LogRestService();
     },
 })
 export default class Payment extends Vue {
-
+    public created(){
+        if(!this.$store.state.IsUserLoggedIn){
+            router.push("/")
+        }
+    }
+    
     public payMoney(){
         // static/Images/logo.jpg
         console.log("teste");
