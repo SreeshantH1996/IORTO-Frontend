@@ -15,7 +15,10 @@
           <a href="/#/userhome">
             <button class="btn btn-lg btn-primary" style="margin-top:3%;margin-left:2%;">Cancel</button>
           </a>
-          </span>
+          </span><br>
+          <div style="margin-top:5%;display:none;" id="completebutton">
+            <b>Once Payment is completed successfully, <span style="color:red;" v-on:click="navigateToHome()">Please click here</span> </b>
+          </div>
         </div>
       </div>
     </div>  

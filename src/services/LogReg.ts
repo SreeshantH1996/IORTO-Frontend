@@ -22,4 +22,16 @@ export default class LogRestService {
   public getUserDetials(data: any) {
     return this.apiService.post('get_user/', data);
   }
+
+  public documentUploadApi(data: any) {
+    return this.apiService.post('document_upload/', data);
+  }
+
+  public getUserStatus(data: any) {
+    return this.apiService.post('user_status/', data);
+  }
+
+  public userStatusUpdate(data: any) {
+    return this.apiService.post('status_update/', data);
+  }
 }  

@@ -16,6 +16,7 @@ const logregserve = new LogRestService();
 export default class UploadDocuments extends Vue {
     public user_id = "";
     public UserDetials = "";
+    public UserDocuments = "";
     public created(){
         if(!this.$store.state.IsUserLoggedIn){
             router.push("/")
@@ -37,6 +38,7 @@ export default class UploadDocuments extends Vue {
         logregserve.getUserDetials(data).then((response: any) => {
             console.log(response.data.data.status);
             this.UserDetials = response.data.data.data;
+            this.UserDocuments = response.data.data.documents;
             console.log(this.UserDetials)
             var status = response.data.data.status
             if (status){
@@ -53,7 +55,27 @@ export default class UploadDocuments extends Vue {
         });
     }
 
-    public CreateLicence(){
-        console.log("test")
+    public UploadDocuments(){
+        let loader = this.$loading.show();
+        const form: any = document.getElementById('uploaddocuments');
+        const formData = new FormData(form);
+        formData.append('user_id', this.user_id);
+        logregserve.documentUploadApi(formData).then((response: any) => {
+            console.log(response.data.data.status);
+            var status = response.data.data.status
+            if (status){
+                setTimeout(() => {
+                    loader.hide()
+                },200) 
+                this.$router.push("/payments");    
+                this.$store.dispatch('showSuccessMsg', "Documents uploaded successfully");
+            }else{
+                this.$store.dispatch('showErrorMsg', response.data.data.message);
+                loader.hide()
+            }
+        }, (err: any) => {
+            console.log("error");
+            loader.hide()
+        });
     }
 }

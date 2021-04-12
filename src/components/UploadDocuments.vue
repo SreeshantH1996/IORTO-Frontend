@@ -129,11 +129,11 @@
         <hr />
         <div style="margin-top: 2%">
           <h4>Upload Documnets</h4>
-          <form v-on:submit.prevent="CreateLicence()" id="uploaddocuments">
+          <form v-on:submit.prevent="UploadDocuments()" id="uploaddocuments">
             <div class="row" style="margin-top: 3%">
               <div class="col-6">
                 <div class="form-group">
-                  <select name="bloodgroup" class="form-control" required>
+                  <select v-model="UserDocuments.identitytype" name="identity_type" class="form-control" required>
                     <option value="">Select ID proof</option>
                     <option value="sslc">SSLC Certificate</option>
                     <option value="adhar">Adhar</option>
@@ -152,6 +152,9 @@
                     name="identityproof"
                     required
                   />
+                  <span v-if="UserDocuments.identitycertificate">
+                   <i>Current document : <a v-bind:href="'http://localhost:8000'+ UserDocuments.identitycertificate" target="__blank">click here</a></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -173,6 +176,9 @@
                     name="eyecertificate"
                     required
                   />
+                  <span v-if="UserDocuments.eyecertificate">
+                   <i>Current document : <a v-bind:href="'http://localhost:8000'+ UserDocuments.eyecertificate" target="__blank">click here</a></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -195,6 +201,9 @@
                     name="selfdeclarationfrom"
                     required
                   />
+                  <span v-if="UserDocuments.selfcertificate">
+                   <i>Current document : <a v-bind:href="'http://localhost:8000'+ UserDocuments.selfcertificate" target="__blank">click here</a></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -216,6 +225,9 @@
                     name="photo"
                     required
                   />
+                  <span v-if="UserDocuments.photo">
+                   <i>Current document : <a v-bind:href="'http://localhost:8000'+ UserDocuments.photo" target="__blank">click here</a></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -235,6 +247,9 @@
                     name="signature"
                     required
                   />
+                  <span v-if="UserDocuments.signature">
+                   <i>Current document : <a v-bind:href="'http://localhost:8000'+ UserDocuments.signature" target="__blank">click here</a></i>
+                  </span>
                 </div>
               </div>
             </div>
@@ -257,9 +272,9 @@
           </form>
         </div>
       </div>
-      <div>
+      <!-- <div>
           <button id="rzp-button1" v-on:click="payMoney()">Pay</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>    
