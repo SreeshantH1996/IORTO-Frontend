@@ -20,7 +20,7 @@
               <p class="card-text">
                 You may view all the important and other document uploaded.
               </p>
-              <a href="#" class="card-link"><button class="btn btn-sm">Click here</button></a>
+              <a href="/#/licence_renewal" class="card-link"><button class="btn btn-sm">Click here</button></a>
             </div>
           </div>
         </div>

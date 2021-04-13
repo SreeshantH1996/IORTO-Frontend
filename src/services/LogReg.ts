@@ -46,4 +46,11 @@ export default class LogRestService {
   public otherDocumentDelete(data: any) {
     return this.apiService.post('other_document_delete/', data);
   }
+  public LicenceRenewalApplication(data:any){
+    return this.apiService.post('licence_renewal/', data);
+  }
+
+  public getUserRenewalDetials(data: any) {
+    return this.apiService.post('get_user_renewal/', data);
+  }
 }  
