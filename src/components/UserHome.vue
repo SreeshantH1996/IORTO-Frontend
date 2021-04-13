@@ -7,10 +7,9 @@
             <div class="card-body">
               <h3 class="card-title">Document List</h3>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                You may view all the important and other document uploaded.
               </p>
-              <a href="#" class="card-link">Click here</a>
+              <a href="/#/document_list" class="card-link"><button class="btn btn-sm">Click here</button> </a>
             </div>
           </div>
         </div>
@@ -19,10 +18,9 @@
             <div class="card-body">
               <h3 class="card-title">Licence Renewel</h3>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                You may view all the important and other document uploaded.
               </p>
-              <a href="#" class="card-link">Click here</a>
+              <a href="#" class="card-link"><button class="btn btn-sm">Click here</button></a>
             </div>
           </div>
         </div>
@@ -34,13 +32,13 @@
                 Current Status of your Application <br> <b style="color:red">{{UserStatus}}</b>
               </p>
               <span v-if="UserStatus == 'Application Filled'" >
-                <a href="/#/uploaddocuments" class="card-link">Click here to upload documents</a>
+                <a href="/#/uploaddocuments" class="card-link"><button class="btn btn-sm">Click here to upload documents</button></a>
               </span>
               <span v-if="UserStatus == 'Documents Uploaded'">
-                <a href="/#/payments" class="card-link">Click here to complete the payment</a>
+                <a href="/#/payments" class="card-link"><button class="btn btn-sm">Click here to complete the payments</button></a>
               </span>
               <span v-if="UserStatus == 'Not yet Applied'">
-                <a href="/#/newlicence" class="card-link">Click here to apply</a>
+                <a href="/#/newlicence" class="card-link"><button class="btn btn-sm">Click here to apply</button></a>
               </span>
             </div>
           </div>
@@ -50,7 +48,7 @@
       <!-- ABOUT START -->
       <div>
           <h1>About </h1>
-          <p style="margin: 4%;margin-top:0% !important; color: #690000;font-family: cursive;">
+          <p style="margin: 4%;margin-top:0% !important; color: rgb(148 148 148); font-family: inherit;">
               Rto –Online Licence Verification System  provide user to register for driving licence and renewal 
               of driving licence. A Licence holder can submit applications on-line to the respective rto 
               officer for licence renewal. Driving is a vital set of skill which makes your life a lot 

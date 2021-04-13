@@ -34,4 +34,16 @@ export default class LogRestService {
   public userStatusUpdate(data: any) {
     return this.apiService.post('status_update/', data);
   }
+
+  public documentList(data: any) {
+    return this.apiService.post('document_list/', data);
+  }
+
+  public otherDocumentUpload(data: any) {
+    return this.apiService.post('other_document_upload/', data);
+  }
+
+  public otherDocumentDelete(data: any) {
+    return this.apiService.post('other_document_delete/', data);
+  }
 }  
