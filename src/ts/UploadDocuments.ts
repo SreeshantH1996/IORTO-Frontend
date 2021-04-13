@@ -60,6 +60,7 @@ export default class UploadDocuments extends Vue {
         const form: any = document.getElementById('uploaddocuments');
         const formData = new FormData(form);
         formData.append('user_id', this.user_id);
+        formData.append('reneweldata',"False");
         logregserve.documentUploadApi(formData).then((response: any) => {
             console.log(response.data.data.status);
             var status = response.data.data.status

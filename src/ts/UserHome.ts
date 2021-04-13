@@ -16,6 +16,7 @@ const logregserve = new LogRestService();
 export default class UserHome extends Vue {
     public user_id = "";
     public UserStatus = "";
+    public RenewalStatus = "";
 
     public created(){
         if(!this.$store.state.IsUserLoggedIn){
@@ -38,6 +39,10 @@ export default class UserHome extends Vue {
         logregserve.getUserStatus(data).then((response: any) => {
             console.log(response.data.data.status);
             this.UserStatus = response.data.data.user_status;
+            this.RenewalStatus = response.data.data.renewal_status;
+            if(!this.RenewalStatus){
+                this.RenewalStatus = "Not yet Applied";
+            }
             setTimeout(() => {
                 loader.hide()
             },200) 

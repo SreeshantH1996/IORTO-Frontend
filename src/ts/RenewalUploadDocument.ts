@@ -1,7 +1,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { BModal, VBModal } from "bootstrap-vue";
 import LogRestService from '../services/LogReg';
-import $ from 'jquery'
+import Razorpay from 'razorpay';
 import router from '@/router';
 
 const logregserve = new LogRestService();
@@ -9,14 +9,16 @@ const logregserve = new LogRestService();
 @Component({
     components: {
         BModal,
+        Razorpay
     },
     directives: {
         'b-modal': VBModal
     },
 })
-export default class LicenceRenewalForm extends Vue {
+export default class RenewalUploadDocument extends Vue {
     public user_id = "";
     public UserDetials = "";
+    public UserDocuments = "";
 
     public created() {
         if (!this.$store.state.IsUserLoggedIn) {
@@ -55,34 +57,21 @@ export default class LicenceRenewalForm extends Vue {
         });
     }
 
-    
-    public SameAsAboveClick() {
-        console.log("Click on button")
-        var element = <HTMLInputElement>document.getElementById("is3dCheckBox");
-        var isChecked = element.checked;
-        console.log(isChecked);
-        if(isChecked){
-            $("#temporaryadd").hide();
-        }else{
-            $("#temporaryadd").show();
-        }
-    }
-
-    public CreateLicenceRenewal(){
+    public UploadDocuments(){
         let loader = this.$loading.show();
-        console.log("test")
-        const form: any = document.getElementById('licencerenewal');
+        const form: any = document.getElementById('uploaddocuments');
         const formData = new FormData(form);
         formData.append('user_id', this.user_id);
-        logregserve.LicenceRenewalApplication(formData).then((response: any) => {
+        formData.append('reneweldata',"True");
+        logregserve.documentUploadApi(formData).then((response: any) => {
             console.log(response.data.data.status);
             var status = response.data.data.status
             if (status){
                 setTimeout(() => {
                     loader.hide()
                 },200) 
-                this.$router.push("/licence_renewal_upload_document");    
-                this.$store.dispatch('showSuccessMsg', "Application updated successfully");
+                this.$router.push("/payments");    
+                this.$store.dispatch('showSuccessMsg', "Documents uploaded successfully");
             }else{
                 this.$store.dispatch('showErrorMsg', response.data.data.message);
                 loader.hide()
