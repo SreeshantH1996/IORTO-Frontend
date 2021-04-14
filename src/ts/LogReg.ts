@@ -48,6 +48,8 @@ export default class LogReg extends Vue {
                     this.$router.push('/userhome');
                 }else if(this.user_type == "admin"){
                     this.$router.push('/adminhome');
+                }else if(this.user_type == "rto"){
+                    this.$router.push('/rtohome');
                 }
                 let loader = this.$loading.show();
                 setTimeout(() => {

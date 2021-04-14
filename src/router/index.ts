@@ -68,6 +68,16 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "userhome" */ '../views/UserStatus.vue')
   },
   {
+    path: '/adminhome',
+    name: 'Adminhome',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/Adminhome.vue')
+  },
+  {
+    path: '/rto_registration',
+    name: 'RtoRegistration',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/RtoRegistration.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

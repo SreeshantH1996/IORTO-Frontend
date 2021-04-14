@@ -75,12 +75,13 @@
             >Regsiter as a User</b-button
           >
           </a>
+          <a href="/#/rto_registration">
           <b-button
-            v-b-modal.RtoRegistartionModal
             style="background: #11770a;margin-top:2%;"
             type="button"
             >Register as a RTO Officer</b-button
           >
+          </a>
 
         </div>
       </div>
@@ -91,79 +92,7 @@
       title="RTO Officer Registration"
     >
       <form>
-        <div class="signup_form">
-          <div class="form-group">
-            <label>Name</label>
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Enter you name"
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Contact Number</label>
-            <input
-              type="number"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter a valid number"
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Officer ID</label>
-            <input
-              type="text"
-              class="form-control"
-              id="exampleFormControlInput1"
-              placeholder="Enter a valid ID"
-            />
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">District</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option value="">Select and option</option>
-              <option value="Alappuzha">Alappuzha</option>
-              <option value="Ernakulam">Ernakulam</option>
-              <option value="Idukki">Idukki</option>
-              <option value="Kannur">Kannur</option>
-              <option value="Kasaragod">Kasaragod</option>
-              <option value="Kollam">Kollam</option>
-              <option value="Kottayam">Kottayam</option>
-              <option value="Kozhikode">Kozhikode</option>
-              <option value="Malappuram">Malappuram</option>
-              <option value="Palakkad">Palakkad</option>
-              <option value="Pathanamthitta">Pathanamthitta</option>
-              <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-              <option value="Thrissur">Thrissur</option>
-              <option value="Wayanad">Wayanad</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Username</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Enter a valid username"
-            />
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="***********"
-            />
-          </div>
-          <div class="form-group">
-            <label>Reneter the password</label>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="***********"
-            />
-          </div>
-          <button type="button" class="submit">Sign Up</button>
-        </div>
+        
       </form>
     </b-modal>
     <!-- RTO REGISTRATION MODAL END -->

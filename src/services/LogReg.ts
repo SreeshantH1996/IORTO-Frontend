@@ -57,4 +57,18 @@ export default class LogRestService {
   public getStatusPagedata(data: any) {
     return this.apiService.post('get_status_data/', data);
   }
+
+  public createRTOOfficer(data: any) {
+    return this.apiService.post('create_rto/', data);
+  }
+  public getRTOList(){
+    return this.apiService.get('rto_list/')
+  }
+  public rtoOfficerDelete(data: any) {
+    return this.apiService.post('rto_delete/', data);
+  }
+
+  public rtoOfficerRegistration(data: any) {
+    return this.apiService.post('rto_registration/', data);
+  }
 }  

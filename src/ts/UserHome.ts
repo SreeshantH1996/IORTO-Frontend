@@ -28,6 +28,9 @@ export default class UserHome extends Vue {
             console.log(user)
             if (user !== null) {
                 this.user_id = user.user_id;
+                if(user.user_type == "admin"){
+                    router.push("/adminhome")
+                }
             }
         }
         this.getUserStatus()
