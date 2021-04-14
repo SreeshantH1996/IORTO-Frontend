@@ -14,9 +14,9 @@
           <span> RTO-OLVS </span>
         </div>
         <div class="col-6" style="text-align: right">
-          <button class="btn-lg btn-primary" style="margin-right: 4px">
+          <!-- <button class="btn-lg btn-primary" style="margin-right: 4px">
             Edit Profile
-          </button>
+          </button> -->
           <button v-on:click="LogOut()" class="btn-lg btn-primary">
             Logout
           </button>

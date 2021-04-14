@@ -53,4 +53,8 @@ export default class LogRestService {
   public getUserRenewalDetials(data: any) {
     return this.apiService.post('get_user_renewal/', data);
   }
+
+  public getStatusPagedata(data: any) {
+    return this.apiService.post('get_status_data/', data);
+  }
 }  

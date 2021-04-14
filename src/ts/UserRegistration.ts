@@ -15,6 +15,7 @@ const logregserve = new LogRestService();
 export default class UserRegistration extends Vue {
     public userRegpas = "";
     public userRegrep = "";
+    public phnumber = "";
     private UserRegsitrationSubmit() {
         if(this.userRegpas.length < 8){
             this.$store.dispatch('showErrorMsg', "Password should have a length of 8 charachters");
@@ -23,6 +24,10 @@ export default class UserRegistration extends Vue {
         if (this.userRegpas != this.userRegrep){
             this.$store.dispatch('showErrorMsg', "Please enter the same password");
             return false;
+        }
+        if(this.phnumber.length < 10){
+            this.$store.dispatch('showErrorMsg', "Password should have a length of 8 charachters");
+            return false; 
         }
         const form: any = document.getElementById('user_registrationfrom');
         const formData = new FormData(form);

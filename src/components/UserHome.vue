@@ -33,7 +33,7 @@
                 <b>You have already one payment pending.</b>
               </span>
               <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall'">
-                <button class="btn btn-sm">View status</button>
+                <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
             </div>
           </div>
@@ -61,7 +61,7 @@
                 <a href="/#/payments" class="card-link"><button class="btn btn-sm">Complete payments</button></a>
               </span>
               <span v-if="UserStatus == 'Payment Completed, Waiting for approvall'">
-                <button class="btn btn-sm">View status</button>
+                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
             </div>
           </div>

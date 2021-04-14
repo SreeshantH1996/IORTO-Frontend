@@ -15,6 +15,7 @@ const logregserve = new LogRestService();
 })
 export default class LogReg extends Vue {
     public isLoading = false
+    public user_type = "";
 
     public created(){
         console.log("test")
@@ -42,7 +43,12 @@ export default class LogReg extends Vue {
                 this.$store.state.IsUserLoggedIn = true;
                 let User = JSON.parse(localStorage.getItem('user') || '{}');
                 this.$store.state.User = User.username;
-                this.$router.push('/userhome');
+                this.user_type = response.data.data.user_type;
+                if (this.user_type == "user"){
+                    this.$router.push('/userhome');
+                }else if(this.user_type == "admin"){
+                    this.$router.push('/adminhome');
+                }
                 let loader = this.$loading.show();
                 setTimeout(() => {
                     location.reload();

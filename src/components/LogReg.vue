@@ -30,7 +30,7 @@
                 <label>Login As<span style="color: red">*</span></label>
                 <select name="user_type" class="form-control" required>
                   <option value="">--</option>
-                  <option value="admin">Admin</option>
+                  <option value="Admin">Admin</option>
                   <option value="User">User</option>
                   <option value="rto">RTO Officer</option>
                 </select>

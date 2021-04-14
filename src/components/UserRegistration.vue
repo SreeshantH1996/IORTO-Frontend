@@ -39,6 +39,17 @@
             />
           </div>
           <div class="form-group">
+            <label>Phone Number<span style="color: red">*</span></label>
+            <input
+              name="age"
+              type="phnumber"
+              v-model="phnumber"
+              class="form-control"
+              placeholder="Enter you age"
+              required
+            />
+          </div>
+          <div class="form-group">
             <label for="exampleFormControlSelect1"
               >District<span style="color: red">*</span></label
             >
