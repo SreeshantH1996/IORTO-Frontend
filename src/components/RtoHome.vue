@@ -9,7 +9,7 @@
               <p>
                   All users registered in the <b>RTO-OLVS</b> will be displayed.
               </p>
-              <a href="/#/document_list" class="card-link"
+              <a href="/#/userlist" class="card-link"
                 ><button class="btn btn-sm">Click here</button>
               </a>
             </div>
@@ -22,7 +22,7 @@
               <p>
                   All new Licence renewal application on <b>RTO-OLVS</b> will be displayed.
               </p>
-              <a href="/#/document_list" class="card-link"
+              <a href="/#/renewallist" class="card-link"
                 ><button class="btn btn-sm">Click here</button>
               </a>
             </div>

@@ -71,4 +71,12 @@ export default class LogRestService {
   public rtoOfficerRegistration(data: any) {
     return this.apiService.post('rto_registration/', data);
   }
+
+  public getUserList(){
+    return this.apiService.get('user_list/')
+  }
+
+  public licenceRenewalList(data: any) {
+    return this.apiService.post('renewal_list/', data);
+  }
 }  
