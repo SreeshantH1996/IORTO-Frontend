@@ -28,8 +28,12 @@ export default class Adminhome extends Vue {
             console.log(user)
             if (user !== null) {
                 this.user_id = user.user_id;
-                if(user.user_type == "user"){
+                if(user.user_type == "admin"){
+                    router.push("/adminhome")
+                }else if(user.user_type == "user"){
                     router.push("/userhome")
+                }else if(user.user_type == "rto"){
+                    router.push("/rtohome")
                 }
             }
         }

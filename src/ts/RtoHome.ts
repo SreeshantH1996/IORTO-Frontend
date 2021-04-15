@@ -37,26 +37,6 @@ export default class UserHome extends Vue {
                 }
             }
         }
-        this.getUserStatus()
-    }
-
-    public getUserStatus(){
-        let loader = this.$loading.show();
-        var data = {"user_id":this.user_id}
-        logregserve.getUserStatus(data).then((response: any) => {
-            console.log(response.data.data.status);
-            this.UserStatus = response.data.data.user_status;
-            this.RenewalStatus = response.data.data.renewal_status;
-            if(!this.RenewalStatus){
-                this.RenewalStatus = "Not yet Applied";
-            }
-            setTimeout(() => {
-                loader.hide()
-            },200) 
-        }, (err: any) => {
-            console.log("error");
-            loader.hide()
-        });
-
+        // this.getUserStatus()
     }
 }
