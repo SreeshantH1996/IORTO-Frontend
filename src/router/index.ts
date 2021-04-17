@@ -93,6 +93,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "userhome" */ '../views/LicenceRenewalList.vue')
   },
   {
+    path: '/renewal/:id',
+    name: 'RenewalApplicationDetails',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/RenewalApplicationDetails.vue')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

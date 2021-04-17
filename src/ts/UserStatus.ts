@@ -63,5 +63,6 @@ export default class UserStatus extends Vue {
         window.print();
 
         document.body.innerHTML = originalContents;
+        this.getUserDetials()
     }
 }

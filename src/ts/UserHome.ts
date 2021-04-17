@@ -17,6 +17,7 @@ export default class UserHome extends Vue {
     public user_id = "";
     public UserStatus = "";
     public RenewalStatus = "";
+    public reason ="";
 
     public created(){
         if(!this.$store.state.IsUserLoggedIn){
@@ -47,6 +48,7 @@ export default class UserHome extends Vue {
             console.log(response.data.data.status);
             this.UserStatus = response.data.data.user_status;
             this.RenewalStatus = response.data.data.renewal_status;
+            this.reason = response.data.data.reason;
             if(!this.RenewalStatus){
                 this.RenewalStatus = "Not yet Applied";
             }

@@ -10,6 +10,7 @@
             <h3>Amount : <b>₹ 100 /-</b></h3><br>
             <h3>Payment Status : <b><span style="color:red;" v-if="UserDetials.status == 'Payment Completed, Waiting for approvall'">Processing</span></b></h3><br>
             <h3>Application Status : <b>{{UserDetials.status}}</b></h3><br>
+            <span v-if="UserDetials.status == 'Rejected'" style="color:red">Reason : <b>{{UserDetials.reason}}</b></span>
         </div>
         </div>
         <a href="/#/userhome">

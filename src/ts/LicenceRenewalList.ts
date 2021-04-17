@@ -52,7 +52,7 @@ export default class LicenceRenewalList extends Vue {
                     loader.hide()
                 },200) 
                 // this.$router.push("/licence_renewal_upload_document");    
-                this.$store.dispatch('showSuccessMsg', "Application updated successfully");
+                // this.$store.dispatch('showSuccessMsg', "Application updated successfully");
             }else{
                 this.$store.dispatch('showErrorMsg', response.data.data.message);
                 loader.hide()

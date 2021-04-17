@@ -79,4 +79,12 @@ export default class LogRestService {
   public licenceRenewalList(data: any) {
     return this.apiService.post('renewal_list/', data);
   }
+
+  public licenceApplication(data: any) {
+    return this.apiService.post('renewal_application/', data);
+  }
+
+  public RtoStatusChange(data: any) {
+    return this.apiService.post('rto_status_change/', data);
+  }
 }  

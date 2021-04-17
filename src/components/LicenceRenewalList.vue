@@ -25,7 +25,7 @@
               <td>
                 <a
                   v-bind:href="
-                    'http://localhost:8000/renewal/?id=' + user.id
+                    'http://localhost:8080/#/renewal/' + user.id
                   "
                   >click here</a
                 >

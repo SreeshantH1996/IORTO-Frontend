@@ -35,6 +35,10 @@
               <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall'">
                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
+              <span >
+                <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
+                <!-- <span style="color:red">Reason : <b>{{reason}}</b></span> -->
+              </span>
             </div>
           </div>
         </div>
