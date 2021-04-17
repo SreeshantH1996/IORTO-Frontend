@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="backgroud-image=url('')">
     <div id="header" v-if="UserLoggedInFlag">
       <div class="row">
         <div
@@ -46,8 +46,8 @@
 }
 body {
   overflow: hidden !important;
-  /* background-color: #d0d0d0; */
-  background: url("http://localhost:8000/static/Images/bg.jpg");
+  background-color: #9a9a9a;
+  /* background: url("http://localhost:8000/static/Images/bg.jpg"); */
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
