@@ -109,8 +109,8 @@
             <div class="row" style="margin-top: 3%">
               <div class="col-6">
                 <div class="form-group">
-                  <select v-model="UserDocuments.identitytype" name="identity_type" class="form-control" required>
-                    <option value="">Select ID proof</option>
+                  <select name="identity_type" class="form-control" required>
+                    <option value="" >Select ID proof</option>
                     <option value="sslc">SSLC Certificate</option>
                     <option value="adhar">Adhar</option>
                     <option value="vid">Voter ID</option>

@@ -11,7 +11,8 @@
                 <th scope="col">User Name</th>
                 <th scope="col">District</th>
                 <th scope="col">Phone number</th>
-                <th scope="col">User Status</th>
+                <th scope="col">New Application Status</th>
+                <th scope="col">Renewal Application Status</th>
                 <!-- <th scope="col">More details</th> -->
               </tr>
             </thead>
@@ -22,6 +23,8 @@
               <td>{{ user.district }}</td>
               <td>{{ user.phnumber }}</td>
               <td><b style="color:red">{{ user.user_status }}</b></td>
+              <td><b style="color:red">{{ user.renewal_status }}</b></td>
+
               <!-- <td>
                 <a
                   v-bind:href="

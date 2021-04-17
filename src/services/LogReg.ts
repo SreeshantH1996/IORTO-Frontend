@@ -96,4 +96,8 @@ export default class LogRestService {
     return this.apiService.post('application_detials/', data);
   }
 
+  public getNewStatusPagedata(data: any) {
+    return this.apiService.post('get_new_status_data/', data);
+  }
+
 }  

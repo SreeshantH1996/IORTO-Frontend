@@ -42,11 +42,12 @@
 <style>
 #header {
   padding: 8px;
-  background-color: #b7b6b6;
+  background-color: #888586;
 }
 body {
   overflow: hidden !important;
-  background-color: #d0d0d0;
+  /* background-color: #d0d0d0; */
+  background: url("http://localhost:8000/static/Images/bg.jpg");
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

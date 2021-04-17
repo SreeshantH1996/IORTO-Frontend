@@ -35,7 +35,7 @@
               <span v-if="RenewalStatus == 'Documents Uploaded' && UserStatus == 'Documents Uploaded'">
                 <b>You have already one payment pending.</b>
               </span>
-              <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall' || RenewalStatus == 'Rejected' || RenewalStatus == 'Resubmit'">
+              <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall' || RenewalStatus == 'Rejected' || RenewalStatus == 'Resubmit' || renew_payment == 'Success'">
                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
               <!-- <span >
@@ -58,7 +58,7 @@
               <span v-if="UserStatus == 'Application Filled' && RenewalStatus == 'Not yet Applied'" >
                 <a href="/#/uploaddocuments" class="card-link"><button class="btn btn-sm">Upload documents</button></a>
               </span>
-              <span v-if="UserStatus == 'Documents Uploaded' && RenewalStatus == 'Not yet Applied'">
+              <span v-if="UserStatus == 'Documents Uploaded' && RenewalStatus == 'Not yet Applied' && new_payment != 'Success'">
                 <a href="/#/payments" class="card-link"><button class="btn btn-sm">Complete payments</button></a>
               </span>
               <span v-if="UserStatus == 'Not yet Applied' && RenewalStatus == 'Not yet Applied'">
@@ -67,10 +67,10 @@
               <span v-if="RenewalStatus != 'Not yet Applied' && UserStatus != 'Documents Uploaded'">
                 <b>You have already applied for licence renewal</b>
               </span>
-              <span v-if="RenewalStatus == 'Documents Uploaded' && UserStatus == 'Documents Uploaded'">
+              <span v-if="RenewalStatus == 'Documents Uploaded' && UserStatus == 'Documents Uploaded' ">
                 <a href="/#/payments" class="card-link"><button class="btn btn-sm">Complete payments</button></a>
               </span>
-              <span v-if="UserStatus == 'Payment Completed, Waiting for approvall' || UserStatus == 'Rejected' || UserStatus == 'Resubmit'">
+              <span v-if="UserStatus == 'Payment Completed, Waiting for approvall' || UserStatus == 'Rejected' || UserStatus == 'Resubmit' || new_payment == 'Success'">
                  <a href="/#/new_user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
             </div>

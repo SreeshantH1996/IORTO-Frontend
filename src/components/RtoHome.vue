@@ -42,6 +42,21 @@
           </div>
         </div>
       </div>
+
+      <!-- ABOUT START -->
+      <div>
+          <h1>About </h1>
+          <p style="margin: 4%;margin-top:0% !important; color: rgb(148 148 148); font-family: inherit;">
+              Rto –Online Licence Verification System  provide user to register for driving licence and renewal 
+              of driving licence. A Licence holder can submit applications on-line to the respective rto 
+              officer for licence renewal. Driving is a vital set of skill which makes your life a lot 
+              easier and comfortable. A Learner’s Licence is a certificate issued by the Regional Transport 
+              Office (RTO) which plays as a provisional and restricted driving license. 
+              which is issued to someone who’s in his beginning stage of driving or learning how to drive. 
+              A person owning an active driving license issued by the Regional Transport Office (RTO) 
+              is allowed to drive a motor vehicle in any public place. 
+          </p>
+      </div>
     </div>
   </div>
 </template>

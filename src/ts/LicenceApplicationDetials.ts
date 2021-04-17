@@ -79,7 +79,7 @@ export default class LicenceApplicationDetials extends Vue {
                 setTimeout(() => {
                     loader.hide()
                 },200) 
-                this.$router.push("/renewallist");    
+                this.$router.push("/newapplicationlist");    
                 this.$store.dispatch('showSuccessMsg', "Application updated successfully");
             }else{
                 this.$store.dispatch('showErrorMsg', response.data.data.message);

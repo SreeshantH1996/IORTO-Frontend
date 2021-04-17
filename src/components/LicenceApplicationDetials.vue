@@ -290,9 +290,9 @@
                 <b><label>Payment Status :</label>{{application_details.payment_status}}</b>
               </div>
               <div class="form-group">
-                <label>Current User Status</label>
+                <label>Current User Status</label>{{application_details.user_status}}
                 <select
-                  v-model="application_details.renewal_status"
+                  v-model="application_details.user_status"
                   name="renewal_status"
                   class="form-control"
                   style="height:35px;"
@@ -312,8 +312,8 @@
               
               <div
                 v-if="
-                  application_details.renewal_status == 'Rejected' ||
-                  application_details.renewal_status == 'Resubmit'
+                  application_details.user_status == 'Rejected' ||
+                  application_details.user_status == 'Resubmit'
                 "
                 class="form-group"
               >

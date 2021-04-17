@@ -19,7 +19,8 @@
     padding: 20%;
 }
 .cont {
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
     width: 900px;
     height: 494px;

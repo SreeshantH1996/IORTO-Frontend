@@ -22,7 +22,7 @@
               <td>{{ user.district }}</td>
               <td>{{ user.phnumber }}</td>
               <td style="color:red">{{ user.status }}</td>
-              <td v-if="user.status == 'Payment Completed, Waiting for approvall' || user.status == 'Rejected' || user.status == 'Resubmit'">
+              <td v-if="user.status == 'Payment Completed, Waiting for approvall' || user.status == 'Rejected' || user.status == 'Resubmit' ||  user.payment_status == 'Success'">
                 <a
                   v-bind:href="
                     'http://localhost:8080/#/newapplication/' + user.id
@@ -30,7 +30,7 @@
                   >click here</a
                 >
               </td>
-              <td v-if="user.status == 'Application Filled' || user.status == 'Documents Uploaded' ">
+              <td v-if="user.status == 'Application Filled' || user.status == 'Documents Uploaded' && user.payment_status != 'Success'">
                   Applciation not yet completed
               </td>
             </tr>

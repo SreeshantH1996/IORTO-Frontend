@@ -68,6 +68,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "userhome" */ '../views/UserStatus.vue')
   },
   {
+    path: '/new_user_status',
+    name: 'NewUserStatus',
+    component: () => import(/* webpackChunkName: "userhome" */ '../views/NewUserStatus.vue')
+  },
+  {
     path: '/adminhome',
     name: 'Adminhome',
     component: () => import(/* webpackChunkName: "userhome" */ '../views/Adminhome.vue')

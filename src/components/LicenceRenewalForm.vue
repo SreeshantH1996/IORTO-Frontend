@@ -87,7 +87,6 @@
             <div class="col-6">
               <div class="form-group">
                 <label>Licnece From<span style="color: red">*</span></label>
-                {{UserDetials.licencefrom}}
                 <input
                   name="licencefrom"
                   type="date"
@@ -100,7 +99,6 @@
             </div>
             <div class="col-6">
               <div class="form-group">
-                  {{UserDetials.licencefrom}}
                 <label>Licence To<span style="color: red">*</span></label>
                 <input
                   name="licenceto"
