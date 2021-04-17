@@ -87,4 +87,13 @@ export default class LogRestService {
   public RtoStatusChange(data: any) {
     return this.apiService.post('rto_status_change/', data);
   }
+
+  public ApplicationList(data: any) {
+    return this.apiService.post('application_list/', data);
+  }
+
+  public licenceApplicationDetails(data: any) {
+    return this.apiService.post('application_detials/', data);
+  }
+
 }  

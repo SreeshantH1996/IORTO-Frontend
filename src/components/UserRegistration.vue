@@ -41,8 +41,8 @@
           <div class="form-group">
             <label>Phone Number<span style="color: red">*</span></label>
             <input
-              name="age"
-              type="phnumber"
+              name="phnumber"
+              type="text"
               v-model="phnumber"
               class="form-control"
               placeholder="Enter you age"

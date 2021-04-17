@@ -16,6 +16,9 @@
         <a href="/#/userhome">
             <button class="btn btn-lg" style="margin-right:2%;">Cancel</button>
           </a>
+          <a v-if="UserDetials.status == 'Resubmit'" href="/#/licence_renewal">
+            <button class="btn btn-lg" style="margin-right:2%;">Edit Application</button>
+          </a>
         <button v-on:click="printScreen()" class="btn btn-lg">Print Reciept</button>
     </div>
   </div>

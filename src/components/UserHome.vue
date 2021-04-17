@@ -20,6 +20,9 @@
               <p style="margin-top:8%;" class="card-text">
                 Current Status of your Application <br> <b style="color:red">{{RenewalStatus}}</b>
               </p>
+              <p v-if="renew_payment" style="margin-top:8%;" class="card-text">
+                Payment Status : <br> <b style="color:green">{{renew_payment}}</b>
+              </p>
               <span v-if="RenewalStatus == 'Application Filled'" >
                 <a href="/#/licence_renewal_upload_document" class="card-link"><button class="btn btn-sm">Upload documents</button></a>
               </span>
@@ -32,13 +35,13 @@
               <span v-if="RenewalStatus == 'Documents Uploaded' && UserStatus == 'Documents Uploaded'">
                 <b>You have already one payment pending.</b>
               </span>
-              <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall'">
+              <span v-if="RenewalStatus == 'Payment Completed, Waiting for approvall' || RenewalStatus == 'Rejected' || RenewalStatus == 'Resubmit'">
                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
-              <span >
+              <!-- <span >
                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
-                <!-- <span style="color:red">Reason : <b>{{reason}}</b></span> -->
-              </span>
+                <span style="color:red">Reason : <b>{{reason}}</b></span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -48,6 +51,9 @@
               <h3 class="card-title">Apply for Licence</h3>
               <p style="margin-top:8%;" class="card-text">
                 Current Status of your Application <br> <b style="color:red">{{UserStatus}}</b>
+              </p>
+              <p v-if="new_payment" style="margin-top:8%;" class="card-text">
+                Payment Status : <br> <b style="color:green">{{new_payment}}</b>
               </p>
               <span v-if="UserStatus == 'Application Filled' && RenewalStatus == 'Not yet Applied'" >
                 <a href="/#/uploaddocuments" class="card-link"><button class="btn btn-sm">Upload documents</button></a>
@@ -64,8 +70,8 @@
               <span v-if="RenewalStatus == 'Documents Uploaded' && UserStatus == 'Documents Uploaded'">
                 <a href="/#/payments" class="card-link"><button class="btn btn-sm">Complete payments</button></a>
               </span>
-              <span v-if="UserStatus == 'Payment Completed, Waiting for approvall'">
-                 <a href="/#/user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
+              <span v-if="UserStatus == 'Payment Completed, Waiting for approvall' || UserStatus == 'Rejected' || UserStatus == 'Resubmit'">
+                 <a href="/#/new_user_status" class="card-link"><button class="btn btn-sm">View status</button></a>
               </span>
             </div>
           </div>

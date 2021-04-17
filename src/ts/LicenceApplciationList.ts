@@ -13,13 +13,10 @@ const logregserve = new LogRestService();
         'b-modal': VBModal
     },
 })
-export default class UserHome extends Vue {
+export default class LicenceApplciationList extends Vue {
     public user_id = "";
-    public UserStatus = "";
-    public RenewalStatus = "";
-    public renew_reason ="";
-    public renew_payment = "";
-    public new_payment = "";
+    public UserData = "";
+    public district = "";
 
     public created(){
         if(!this.$store.state.IsUserLoggedIn){
@@ -29,43 +26,39 @@ export default class UserHome extends Vue {
             console.log(userFromStorage)
             const user = JSON.parse(userFromStorage || "") as any;
             console.log(user)
+            debugger
             if (user !== null) {
                 this.user_id = user.user_id;
                 if(user.user_type == "admin"){
                     router.push("/adminhome")
                 }else if(user.user_type == "user"){
                     router.push("/userhome")
-                }else if(user.user_type == "rto"){
-                    router.push("/rtohome")
                 }
             }
         }
-        this.getUserStatus()
+        this.getLicenceRenewalList()
     }
-
-    public getUserStatus(){
+    public getLicenceRenewalList(){
         let loader = this.$loading.show();
         var data = {"user_id":this.user_id}
-        logregserve.getUserStatus(data).then((response: any) => {
+        logregserve.ApplicationList(data).then((response: any) => {
             console.log(response.data.data.status);
-            this.UserStatus = response.data.data.user_status;
-            this.RenewalStatus = response.data.data.renewal_status;
-            this.renew_reason = response.data.data.renew_reason;
-            this.renew_payment = response.data.data.renewal_payment_status;
-            this.new_payment = response.data.data.new_payment_status;
-            if(!this.RenewalStatus){
-                this.RenewalStatus = "Not yet Applied";
-            }
-            if(!this.UserStatus){
-                this.UserStatus = "Not yet Applied";
-            }
-            setTimeout(() => {
+            var status = response.data.data.status
+            this.UserData = response.data.data.data
+            this.district =  response.data.data.district
+            if (status){
+                setTimeout(() => {
+                    loader.hide()
+                },200) 
+                // this.$router.push("/licence_renewal_upload_document");    
+                // this.$store.dispatch('showSuccessMsg', "Application updated successfully");
+            }else{
+                this.$store.dispatch('showErrorMsg', response.data.data.message);
                 loader.hide()
-            },200) 
+            }
         }, (err: any) => {
             console.log("error");
             loader.hide()
         });
-
     }
 }

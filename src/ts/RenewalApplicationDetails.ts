@@ -68,6 +68,7 @@ export default class RenewalApplicationDetails extends Vue {
         console.log(form)
         const formData = new FormData(form);
         formData.append('user_id', id);
+        formData.append('type', "renewal");
         logregserve.RtoStatusChange(formData).then((response: any) => {
             console.log(response.data.data.status);
             var status = response.data.data.status

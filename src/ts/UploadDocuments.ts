@@ -15,7 +15,7 @@ const logregserve = new LogRestService();
 })
 export default class UploadDocuments extends Vue {
     public user_id = "";
-    public UserDetials = "";
+    public UserDetials:any = [];
     public UserDocuments = "";
     public created(){
         if(!this.$store.state.IsUserLoggedIn){
@@ -68,7 +68,11 @@ export default class UploadDocuments extends Vue {
                 setTimeout(() => {
                     loader.hide()
                 },200) 
-                this.$router.push("/payments");    
+                if(this.UserDetials.payment_status == "Success"){
+                    this.$router.push("/userhome"); 
+                }else{
+                    this.$router.push("/payments");    
+                }
                 this.$store.dispatch('showSuccessMsg', "Documents uploaded successfully");
             }else{
                 this.$store.dispatch('showErrorMsg', response.data.data.message);

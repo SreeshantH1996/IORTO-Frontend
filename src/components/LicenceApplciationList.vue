@@ -2,13 +2,13 @@
   <div>
     <div class="cont">
       <div style="margin: 7%; margin-bottom: 13%">
-        <h3>Licence Renewal List of <b>{{district}}</b></h3>
+        <h3>New Licence Application List of <b>{{district}}</b></h3>
         <div>
           <table id="user_list" class="table" style="text-align: left;margin-top:4%;">
             <thead>
               <tr>
                 <th scope="col">Application ID</th>
-                <th scope="col">User Name</th>
+                <th scope="col">Applicant Name</th>
                 <th scope="col">District</th>
                 <th scope="col">Phone number</th>
                 <th scope="col">Status</th>
@@ -21,14 +21,17 @@
               <td>{{ user.name }}</td>
               <td>{{ user.district }}</td>
               <td>{{ user.phnumber }}</td>
-              <td style="color:red">{{ user.renewal_status }}</td>
-              <td>
+              <td style="color:red">{{ user.status }}</td>
+              <td v-if="user.status == 'Payment Completed, Waiting for approvall' || user.status == 'Rejected' || user.status == 'Resubmit'">
                 <a
                   v-bind:href="
-                    'http://localhost:8080/#/renewal/' + user.id
+                    'http://localhost:8080/#/newapplication/' + user.id
                   "
                   >click here</a
                 >
+              </td>
+              <td v-if="user.status == 'Application Filled' || user.status == 'Documents Uploaded' ">
+                  Applciation not yet completed
               </td>
             </tr>
           </tbody>
@@ -47,5 +50,5 @@
     </div>
   </div>
 </template>
-<script lang="ts" src="../ts/LicenceRenewalList.ts"></script>
+<script lang="ts" src="../ts/LicenceApplciationList.ts"></script>
 <style scoped src="../css/UserList.css"></style>        

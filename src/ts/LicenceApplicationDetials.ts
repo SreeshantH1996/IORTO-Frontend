@@ -1,7 +1,6 @@
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { BModal, VBModal } from "bootstrap-vue";
 import LogRestService from '../services/LogReg';
-import Razorpay from 'razorpay';
 import router from '@/router';
 
 const logregserve = new LogRestService();
@@ -9,39 +8,48 @@ const logregserve = new LogRestService();
 @Component({
     components: {
         BModal,
-        Razorpay
     },
     directives: {
         'b-modal': VBModal
     },
 })
-export default class RenewalUploadDocument extends Vue {
+export default class LicenceApplicationDetials extends Vue {
     public user_id = "";
-    public UserDetials:any = [];
-    public UserDocuments = "";
+    public application_id = "";
+    public application_details = "";
+    public document_list = "";
+    public other_documents = "";
 
-    public created() {
-        if (!this.$store.state.IsUserLoggedIn) {
+    public created(){
+        this.application_id = this.$route.params.id; 
+        if(!this.$store.state.IsUserLoggedIn){
             router.push("/")
-        } else {
+        }else{
             const userFromStorage = localStorage.getItem("user");
             console.log(userFromStorage)
             const user = JSON.parse(userFromStorage || "") as any;
             console.log(user)
+            debugger
             if (user !== null) {
                 this.user_id = user.user_id;
+                if(user.user_type == "admin"){
+                    router.push("/adminhome")
+                }else if(user.user_type == "user"){
+                    router.push("/userhome")
+                }
             }
         }
-        this.getUserDetials();
+        this.getUserDetials()
     }
 
     public getUserDetials(){
         let loader = this.$loading.show();
-        var data = {"user_id":this.user_id}
-        logregserve.getUserRenewalDetials(data).then((response: any) => {
+        var data = {"user_id":this.user_id,"app_id":this.application_id}
+        logregserve.licenceApplicationDetails(data).then((response: any) => {
             console.log(response.data.data.status);
-            this.UserDetials = response.data.data.data;
-            console.log(this.UserDetials)
+            this.application_details = response.data.data.application_details;
+            this.document_list = response.data.data.documents;
+            this.other_documents = response.data.data.other_documents;
             var status = response.data.data.status
             if (status){
                 setTimeout(() => {
@@ -57,25 +65,22 @@ export default class RenewalUploadDocument extends Vue {
         });
     }
 
-    public UploadDocuments(){
+    public StatusChangeRTO(id:any){
         let loader = this.$loading.show();
-        const form: any = document.getElementById('uploaddocuments');
+        const form: any = document.getElementById('statusChange');
+        console.log(form)
         const formData = new FormData(form);
-        formData.append('user_id', this.user_id);
-        formData.append('reneweldata',"True");
-        logregserve.documentUploadApi(formData).then((response: any) => {
+        formData.append('user_id', id);
+        formData.append('type', "new");
+        logregserve.RtoStatusChange(formData).then((response: any) => {
             console.log(response.data.data.status);
             var status = response.data.data.status
             if (status){
                 setTimeout(() => {
                     loader.hide()
                 },200) 
-                if(this.UserDetials.payment_status == "Success"){
-                    this.$router.push("/userhome"); 
-                }else{
-                    this.$router.push("/payments");    
-                }  
-                this.$store.dispatch('showSuccessMsg', "Documents uploaded successfully");
+                this.$router.push("/renewallist");    
+                this.$store.dispatch('showSuccessMsg', "Application updated successfully");
             }else{
                 this.$store.dispatch('showErrorMsg', response.data.data.message);
                 loader.hide()

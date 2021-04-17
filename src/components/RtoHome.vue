@@ -35,7 +35,7 @@
               <p>
                   All new Licence<br> application on <b>RTO-OLVS</b> will be displayed.
               </p>
-              <a href="/#/document_list" class="card-link"
+              <a href="/#/newapplicationlist" class="card-link"
                 ><button class="btn btn-sm">Click here</button>
               </a>
             </div>
