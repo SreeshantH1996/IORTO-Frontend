@@ -113,12 +113,12 @@
           <button
             style="margin-top:2%;"
             type="submit"
-            class="btn btn-lg btn-primary"
+            class="btn btn-sm btn-primary"
           >
             Submit
           </button>
           <a href="">
-              <button type="button" style="margin-top:2%;margin-left:1%;" class="btn btn-lg btn-primary">
+              <button type="button" style="margin-top:2%;margin-left:1%;" class="btn btn-sm btn-primary">
                   Cancel
               </button>
           </a>

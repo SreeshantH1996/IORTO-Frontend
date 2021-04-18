@@ -8,7 +8,7 @@
             <thead>
               <tr>
                 <th scope="col">User ID</th>
-                <th scope="col">User Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">District</th>
                 <th scope="col">Phone number</th>
                 <th scope="col">New Application Status</th>
@@ -41,7 +41,7 @@
         <div class="row" style="margin-top: 2%; margin-bottom: 2%;">
               <div class="col-6" style="text-align: left">
                 <a href="/#/rtohome">
-                  <button type="button" class="btn btn-lg btn-primary">
+                  <button type="button" class="btn btn-sm btn-primary">
                     Back
                   </button>
                 </a>

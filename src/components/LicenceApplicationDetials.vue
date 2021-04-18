@@ -256,6 +256,23 @@
               </span>
             </div>
           </div>
+          <div class="row">
+            <div class="col-3">Signature</div>
+            <div class="col-1">:</div>
+            <div class="col-8">
+              <span v-if="document_list.signature">
+                <i
+                  ><a
+                    v-bind:href="
+                      'http://localhost:8000' + document_list.signature
+                    "
+                    target="__blank"
+                    >click here</a
+                  ></i
+                >
+              </span>
+            </div>
+          </div>
           <br />
           <b>Other Documents</b><br>
           <span v-if="other_documents.length < 1"> No documents uploaded</span><br>
@@ -299,11 +316,11 @@
                   required
                 >
                 <!-- Payment Completed, Waiting for approvall -->
-                  <option value="Application Filled">Application Filled</option>
+                  <!-- <option value="Application Filled">Application Filled</option>
                   <option value="Documents Uploaded">Documents Uploaded</option>
                   <option value="Payment Completed, Waiting for approvall">
                     Payment Completed, Waiting for approvall
-                  </option>
+                  </option> -->
                   <option value="Approved">Approved</option>
                   <option value="Rejected">Rejected</option>
                   <option value="Resubmit">Resubmit</option>
@@ -328,13 +345,13 @@
             <span style="color: red">All fields with * mark is mandatory</span>
             <div class="row" style="margin-top: 2%; margin-bottom: 2%">
               <div class="col-6">
-                <button type="submit" class="btn btn-lg btn-primary">
+                <button type="submit" class="btn btn-sm btn-primary">
                   Submit
                 </button>
               </div>
               <div class="col-6" style="text-align: right">
                 <a href="/#/newapplicationlist">
-                  <button type="button" class="btn btn-lg btn-primary">
+                  <button type="button" class="btn btn-sm btn-primary">
                     Cancel
                   </button>
                 </a>

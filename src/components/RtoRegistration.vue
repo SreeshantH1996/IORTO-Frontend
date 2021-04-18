@@ -32,7 +32,7 @@
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Officer ID</label>
-          <div style="color: red;font-size:5px;">**RTO id should will be unique for each district, Make sure you have valid ID from the admin</div>
+          <div style="color: red;font-size:12px;">**RTO id should will be unique for each district, Make sure you have valid ID from the admin</div>
             <input
               type="text"
               class="form-control"
@@ -94,9 +94,9 @@
             />
           </div>
           <span style="color:red;">All field marked as * are mandatory</span><br>  
-          <button style="margin-top:2%;" type="submit" class="btn btn-lg btn-primary">Submit</button>
+          <button style="margin-top:2%;" type="submit" class="btn btn-sm btn-primary">Submit</button>
           <a href="">
-              <button type="button" style="margin-top:2%;margin-left:1%;" class="btn btn-lg btn-primary">
+              <button type="button" style="margin-top:2%;margin-left:1%;" class="btn btn-sm btn-primary">
                   Cancel
               </button>
           </a>

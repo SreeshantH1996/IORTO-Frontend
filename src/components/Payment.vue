@@ -11,9 +11,9 @@
           <span style="color:red;">**All payment proceudres are security encrypted, RTO-OLVS</span><br>
 
           <span >
-          <button class="btn btn-lg btn-primary" style="margin-top:3%;" v-on:click="payMoney()">Pay Now</button>
+          <button class="btn btn-sm btn-primary" style="margin-top:3%;" v-on:click="payMoney()">Pay Now</button>
           <a href="/#/userhome">
-            <button class="btn btn-lg btn-primary" style="margin-top:3%;margin-left:2%;">Cancel</button>
+            <button class="btn btn-sm btn-primary" style="margin-top:3%;margin-left:2%;">Cancel</button>
           </a>
           </span><br>
           <div style="margin-top:5%;display:none;" id="completebutton">

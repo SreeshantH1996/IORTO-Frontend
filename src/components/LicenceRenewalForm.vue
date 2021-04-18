@@ -317,11 +317,11 @@
           <span style="color: red">All fields with * mark is mandatory</span>
           <div class="row" style="margin-top: 2%; margin-bottom: 2%">
             <div class="col-6">
-              <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+              <button type="submit" class="btn btn-sm btn-primary">Submit</button>
             </div>
             <div class="col-6" style="text-align: right">
                 <a href="/#/userhome">
-              <button type="button" class="btn btn-lg btn-primary">Cancel</button>
+              <button type="button" class="btn btn-sm btn-primary">Cancel</button>
                 </a>
             </div>
           </div>

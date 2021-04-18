@@ -66,7 +66,7 @@
             </div>
             <!-- <div class="col-6" style="text-align: right">
                 <a href="/#/userhome">
-              <button type="button" class="btn btn-lg btn-primary">Cancel</button>
+              <button type="button" class="btn btn-sm btn-primary">Cancel</button>
                 </a>
             </div> -->
           </div>

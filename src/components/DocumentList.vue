@@ -137,7 +137,7 @@
       <div class="row" style="margin-top: 2%; margin-bottom: 2%;">
               <div class="col-6" style="text-align: left">
                 <a href="/#/userhome">
-                  <button type="button" class="btn btn-lg btn-primary">
+                  <button type="button" class="btn btn-sm btn-primary">
                     Back
                   </button>
                 </a>

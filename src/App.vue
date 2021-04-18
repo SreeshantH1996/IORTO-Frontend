@@ -14,22 +14,22 @@
           <span> RTO-OLVS </span>
         </div>
         <div class="col-6" style="text-align: right">
-          <!-- <button class="btn-lg btn-primary" style="margin-right: 4px">
+          <!-- <button class="btn-sm btn-primary" style="margin-right: 4px">
             Edit Profile
           </button> -->
-          <button v-on:click="LogOut()" class="btn-lg btn-primary">
+          <button v-on:click="LogOut()" class="btn-sm btn-primary">
             Logout
           </button>
         </div>
       </div>
       <div class="row">
         <div class="col-6" style="text-align: left">
-          <span style="font-size: 3px; color: black">
+          <span style="font-size: 18px; color: black">
             Associated with RTO, Kerala
           </span>
         </div>
         <div class="col-6" style="text-align: right">
-          <span style="test-align: right; font-size: 3px; color: black"
+          <span style="test-align: right; font-size: 18px; color: black"
             >Welcome, <b>{{UserName}}</b></span
           >
         </div>
@@ -46,7 +46,7 @@
 }
 body {
   overflow: hidden !important;
-  background-color: #9a9a9a;
+  background-color: #d2d2d2;
   /* background: url("http://localhost:8000/static/Images/bg.jpg"); */
 }
 #app {

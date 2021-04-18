@@ -98,7 +98,7 @@
         <div class="row" style="margin-top: 4%">
           <div class="col-12">
             <a href="/#/licence_renewal_form/">
-              <button class="btn btn-lg btn-primary">Edit Details</button>
+              <button class="btn btn-sm btn-primary">Edit Details</button>
             </a>
           </div>
         </div>
@@ -258,13 +258,13 @@
             <span style="color: red">All fields with * mark is mandatory</span>
             <div class="row" style="margin-top: 2%; margin-bottom: 2%">
               <div class="col-6">
-                <button type="submit" class="btn btn-lg btn-primary">
+                <button type="submit" class="btn btn-sm btn-primary">
                   Submit
                 </button>
               </div>
               <div class="col-6" style="text-align: right">
                 <a href="/#/userhome">
-                  <button type="button" class="btn btn-lg btn-primary">
+                  <button type="button" class="btn btn-sm btn-primary">
                     Cancel
                   </button>
                 </a>
